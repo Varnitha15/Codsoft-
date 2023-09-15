@@ -1,0 +1,66 @@
+package codsoft;
+import java.util.*;
+
+public class ATMinterface {
+	static int balance=10000;
+	static int pin1=1234;
+	
+public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter account number");
+		int ac_no=s.nextInt();
+		System.out.println("enter pin number");
+		int pin=s.nextInt();
+		if(pin==pin1) {
+			System.out.println("ENTER THE OPTION" );
+			System.out.println("1-CHECK BALANCE");
+			System.out.println("2-DEPOSIT");
+			System.out.println("3-WITHDRAW");
+			System.out.println("4-EXIT");
+			int opt=s.nextInt();
+			System.out.println("YOUR OPTION IS " + opt);
+			if(opt==1) {
+				System.out.println(" account number = "+ac_no);
+              System.out.println("YOUR BALANCE IS " + balance);
+				System.out.println("THANK YOU....");
+				System.out.println("-------------------------------------------");
+}
+			else if(opt==2)
+			{
+				System.out.println("enter the amount to be deposited");
+				int deposit=s.nextInt();
+				balance=balance+deposit;
+				System.out.println(" account number = "+ac_no);
+            System.out.println("BALANCE= " +balance);
+          System.out.println("THANK YOU....");
+			System.out.println("-------------------------------------------");
+				
+			}
+			else if(opt==3)
+			{
+				System.out.println("enter the amount to be withdrawed");
+				int withdraw=s.nextInt();
+				balance=balance-withdraw;
+				System.out.println(" account number = "+ac_no);
+            System.out.println("BALANCE= " +balance);
+          System.out.println("THANK YOU....");
+			System.out.println("-------------------------------------------");
+				
+			}else if(opt==4) {
+		          System.out.println("THANK YOU....");
+					System.out.println("-------------------------------------------");
+
+}
+		}
+		else
+		{
+			System.out.println("Invalid pin ");
+			System.out.println("check pin number");
+			System.out.println("THANK YOU....");
+}
+		
+		
+
+	}
+
+}
