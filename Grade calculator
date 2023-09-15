@@ -1,0 +1,54 @@
+package codsoft;
+import java.util.*;
+
+public class Grade_calculator {
+
+	public static void main(String[] args) {
+Scanner s=new Scanner(System.in);
+System.out.println("enter sub1 marks");
+int Sub1=s.nextInt();
+System.out.println("enter sub2 marks");
+int Sub2=s.nextInt();
+System.out.println("enter sub3 marks");
+int Sub3=s.nextInt();
+double total=Sub1+Sub2+Sub3;
+double percentage=total/3;
+System.out.println("Total marks = "+ total);
+System.out.println("percentage = "+ percentage);
+if(Sub1>=35 && Sub2>=35 && Sub3>=35) {
+		if(percentage>=95) {
+	System.out.println("grade = O  (outstanding)");
+	
+}
+else if(percentage>=85 &&percentage<95  ) {
+	System.out.println("grade = A+");
+	
+}
+else if(percentage>=75 &&percentage<85  ) {
+	System.out.println("grade = A");
+	
+}
+else if(percentage>=65 &&percentage<75  ) {
+	System.out.println("grade = B+");
+	
+}
+else if(percentage>=55 &&percentage<65  ) {
+	System.out.println("grade = B");
+	
+}
+else if(percentage>=45 &&percentage<55  ) {
+	System.out.println("grade = C+");
+	
+}
+else if(percentage>=35 &&percentage<45  ) {
+	System.out.println("grade = C");
+	
+}
+else {
+	System.out.println("grade = f (fail)");
+
+	}
+}else 
+	System.out.println("grade = f (fail)");
+
+	}
