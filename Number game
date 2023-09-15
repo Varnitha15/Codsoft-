@@ -1,0 +1,41 @@
+package codsoft;
+import java.util.*;
+public class num_game{
+	static void num_game(){
+		int i;
+		Scanner s=new Scanner(System.in);
+		int num=1+(int) (100*Math.random());
+		System.out.println("ENTER THE NUMBER OF CHANCES FOR GUESSING A NUMBER");
+		int chance=s.nextInt();
+		for( i=0;i<chance;i++)
+		{
+			System.out.println("GUESS THE NUMBER FROM 1 TO 100");
+			int guess_num=s.nextInt();
+			if(guess_num==num) {
+				System.out.println("CONGRATULATIONS....U  WON");
+				break;
+				}
+			else if(guess_num<num) {
+				System.out.println("YOU HAVE GUESSED THE LOWER NUMBER THAN ACTUAL NUMBER");
+				}
+			else if(guess_num>num) {
+				System.out.println("YOU HAVE GUESSED THE GREATER NUMBER THAN ACTUAL NUMBER");
+				}
+		}
+		if(i==chance) {
+			System.out.println("U HAVE EXHAUSTED CHANCES BETTER LUCK NEXT TIME");
+		}
+			
+				
+				
+			}
+		
+		
+	
+	
+
+	public static void main(String[] args) {
+num_game();
+	}
+
+}
